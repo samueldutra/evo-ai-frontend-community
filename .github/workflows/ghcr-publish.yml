@@ -67,7 +67,7 @@ jobs:
         run: |
           {
             echo "### Imagem publicada"
-            echo "`${IMAGE_NAME}:${{ inputs.tag }}`"
-            echo "digest: `${{ steps.build.outputs.digest }}`"
-            echo "commit: `${{ steps.tags.outputs.sha }}` (ref `${{ inputs.ref }}`)"
+            echo "${IMAGE_NAME}:${{ inputs.tag }}"
+            echo "digest: ${{ steps.build.outputs.digest }}"
+            echo "commit: ${{ steps.tags.outputs.sha }} (ref ${{ inputs.ref }})"
           } >> "$GITHUB_STEP_SUMMARY"
